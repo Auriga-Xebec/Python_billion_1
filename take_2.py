@@ -1,3 +1,5 @@
+
+
 import time
 
 def gen(file_name):
@@ -41,7 +43,10 @@ def print_to_file(data):
             output = "{};{};{};{}\n".format(city,data[city][0],data[city][1],data[city][2])
             log_data.write(output)
 
-make_dictionary('300mil.txt')
-end = time.time()
-print(end-start)
+
+"""Take a txt input file with the format [{{  city_name  }}, {{  temp  }}] in a csv.txt"""
+if __name__ == "__main__":
+    make_dictionary('300mil.txt')
+    end = time.time()
+    print(end-start)
 
